@@ -37,19 +37,19 @@ initial begin
 
     // ================= EDGE CASE TESTING =================
 
-    // 🔴 Overflow case (signed)
+    // Overflow case (signed)
     a = 127; b = 1;     // 127 + 1 = -128 (overflow)
     sel = 3'b000; #100;
 
-    // 🔴 Carry case (unsigned)
+    //  Carry case (unsigned)
     a = 255; b = 1;     // 255 + 1 = 0 with carry
     sel = 3'b000; #100;
 
-    // 🔴 Negative result
+    //  Negative result
     a = 5; b = 10;
     sel = 3'b001; #100; // SUB → negative result
 
-    // 🔴 Zero result
+    //  Zero result
     a = 5; b = 5;
     sel = 3'b001; #100; // 5 - 5 = 0
 
